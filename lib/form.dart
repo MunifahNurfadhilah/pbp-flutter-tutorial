@@ -47,10 +47,7 @@ class _MyFormPageState extends State<MyFormPage> {
             title: const Text('Form'),
             onTap: () {
               // Route menu ke halaman form
-              Navigator.pushReplacement(
-                context,
-                MaterialPageRoute(builder: (context) => const MyFormPage()),
-              );
+              Navigator.pop(context);
             },
           ),
         ],
@@ -218,7 +215,7 @@ class _MyFormPageState extends State<MyFormPage> {
                 style: TextStyle(color: Colors.white),
               ),
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.blue),
+                backgroundColor: MaterialStateProperty.all(Colors.green),
               ),
                onPressed: () {
             if (_formKey.currentState!.validate()) {
